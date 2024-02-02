@@ -27,7 +27,7 @@ public class Utilisateur {
     private String email;
     @Column(name = "mdp")
     private String mdp;
-    @Column(name = "isAdmin")
+    @Column(name = "isadmin")
     private Integer isAdmin;
 
     public int getId_Utilisateur() {
