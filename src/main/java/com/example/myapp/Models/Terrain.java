@@ -11,7 +11,6 @@ import jakarta.persistence.*;
 import jakarta.persistence.Column;
 
 @Entity
-@Table(name = "v_terrain")
 public class Terrain {
 
     @Id
@@ -30,6 +29,9 @@ public class Terrain {
 
     @Column(name = "id_Utilisateur")
     private int idUtilisateur;
+
+    @Column(name = "validation")
+    private int validation;
 
     // Getters and setters
     public int getIdTerrain() {
@@ -70,6 +72,14 @@ public class Terrain {
 
     public void setIdUtilisateur(int idUtilisateur) {
         this.idUtilisateur = idUtilisateur;
+    }
+
+     public int getValidation() {
+        return validation;
+    }
+
+    public void setValidation(int validation) {
+        this.validation = validation;
     }
 
 }
