@@ -9,6 +9,5 @@ import com.example.myapp.Models.*;
 
 @Repository
 public interface TerrainRepository extends JpaRepository<Terrain, Integer> {
-    // List<Terrain> findByIdUtilisateur(int idUtilisateur);
     List<Terrain> findByValidation(int validation);
 }

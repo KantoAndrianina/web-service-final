@@ -12,6 +12,8 @@ import com.example.myapp.Models.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.*;
 
 @RestController
 @RequestMapping("/parcelles")
@@ -31,8 +33,9 @@ public class ParcelleController {
     }
 
     @PostMapping
-    public Parcelle saveParcelle(@RequestBody Parcelle parcelle) {
-        return parcelleService.saveParcelle(parcelle);
+    public ResponseEntity<Parcelle> createParcelle(@RequestBody Parcelle parcelle) {
+        Parcelle createdParcelle = parcelleService.createParcelle(parcelle);
+        return new ResponseEntity<>(createdParcelle, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")

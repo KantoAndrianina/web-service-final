@@ -12,7 +12,8 @@ import com.example.myapp.Models.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.*;
 @RestController
 @RequestMapping("/culture-parcelles")
 public class CultureParcelleController {
@@ -29,9 +30,10 @@ public class CultureParcelleController {
         return cultureParcelleService.getAllCultureParcelles();
     }
 
-    @PostMapping
-    public CultureParcelle saveCultureParcelle(@RequestBody CultureParcelle cultureParcelle) {
-        return cultureParcelleService.saveCultureParcelle(cultureParcelle);
+   @PostMapping
+    public ResponseEntity<CultureParcelle> createCultureParcelle(@RequestBody CultureParcelle cultureParcelle) {
+        CultureParcelle createdCultureParcelle = cultureParcelleService.createCultureParcelle(cultureParcelle);
+        return new ResponseEntity<>(createdCultureParcelle, HttpStatus.CREATED);
     }
 
     // Ajoutez d'autres méthodes de contrôleur selon vos besoins

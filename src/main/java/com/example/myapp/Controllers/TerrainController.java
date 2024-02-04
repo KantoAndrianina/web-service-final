@@ -75,8 +75,5 @@ public class TerrainController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    // @GetMapping("/utilisateur/{idUtilisateur}")
-    // public List<Terrain> getTerrainsByUserId(@PathVariable int idUtilisateur) {
-    //     return terrainService.getTerrainsByUserId(idUtilisateur);
-    // }
+   
 }

@@ -22,7 +22,7 @@ public class CultureParcelleService {
         return cultureParcelleRepository.findAll();
     }
 
-    public CultureParcelle saveCultureParcelle(CultureParcelle cultureParcelle) {
+    public CultureParcelle createCultureParcelle(CultureParcelle cultureParcelle) {
         return cultureParcelleRepository.save(cultureParcelle);
     }
 

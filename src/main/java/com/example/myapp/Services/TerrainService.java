@@ -38,10 +38,6 @@ public class TerrainService {
         terrainRepository.deleteById(id);
     }
 
-    // public List<Terrain> getTerrainsByUserId(int idUtilisateur) {
-    //     return terrainRepository.findByIdUtilisateur(idUtilisateur);
-    // }
-
     public List<Terrain> findTerrainNonValide() {
         return terrainRepository.findByValidation(0);
     }

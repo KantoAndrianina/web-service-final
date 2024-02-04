@@ -34,7 +34,7 @@ public class TerrainCultureView {
     private double Longueur;
     private int id_Culture;
     private String Culture_Nom;
-    private int Culture_Prix;
+    private double Culture_Prix;
     private int id_Culture_Parcelle;
     private int id_Simulation;
     private Date Simulation_Date;
@@ -160,11 +160,11 @@ public class TerrainCultureView {
         Culture_Nom = culture_Nom;
     }
 
-    public int getCulture_Prix() {
+    public double getCulture_Prix() {
         return Culture_Prix;
     }
 
-    public void setCulture_Prix(int culture_Prix) {
+    public void setCulture_Prix(double culture_Prix) {
         Culture_Prix = culture_Prix;
     }
 

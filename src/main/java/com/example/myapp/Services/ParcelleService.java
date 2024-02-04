@@ -22,7 +22,7 @@ public class ParcelleService {
         return parcelleRepository.findById(id);
     }
 
-    public Parcelle saveParcelle(Parcelle parcelle) {
+    public Parcelle createParcelle(Parcelle parcelle) {
         return parcelleRepository.save(parcelle);
     }
 

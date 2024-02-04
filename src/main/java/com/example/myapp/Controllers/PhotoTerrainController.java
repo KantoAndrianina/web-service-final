@@ -11,7 +11,8 @@ import com.example.myapp.Services.*;
 import com.example.myapp.Models.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.*;
 
 @RestController
 @RequestMapping("/photo-terrains")
@@ -31,8 +32,9 @@ public class PhotoTerrainController {
     }
 
     @PostMapping
-    public PhotoTerrain savePhotoTerrain(@RequestBody PhotoTerrain photoTerrain) {
-        return photoTerrainService.savePhotoTerrain(photoTerrain);
+    public ResponseEntity<PhotoTerrain> createPhotoTerrain(@RequestBody PhotoTerrain photo) {
+        PhotoTerrain createdPhoto = photoTerrainService.createPhotoTerrain(photo);
+        return new ResponseEntity<>(createdPhoto, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")

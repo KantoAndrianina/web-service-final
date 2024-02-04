@@ -22,7 +22,7 @@ public class PhotoTerrainService {
         return photoTerrainRepository.findById(id);
     }
 
-    public PhotoTerrain savePhotoTerrain(PhotoTerrain photoTerrain) {
+    public PhotoTerrain createPhotoTerrain(PhotoTerrain photoTerrain) {
         return photoTerrainRepository.save(photoTerrain);
     }
 
