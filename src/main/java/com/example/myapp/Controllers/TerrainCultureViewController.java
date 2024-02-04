@@ -12,6 +12,7 @@ import com.example.myapp.Models.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
 @RestController
 @RequestMapping("/terrain-cultures")
 public class TerrainCultureViewController {
@@ -29,10 +30,10 @@ public class TerrainCultureViewController {
         return terrainCultureViewService.getTerrainCultureViewById(id);
     }
 
-    // @GetMapping("/utilisateur/{id_Utilisateur}")
-    // public List<TerrainCultureView> getTerrainCultureViewsByUserId(@PathVariable int id_Utilisateur) {
-    //     return terrainCultureViewService.getTerrainCultureViewsByUserId(id_Utilisateur);
-    // }
+    @GetMapping("/utilisateur/{idUtilisateur}")
+    public List<TerrainCultureView> getTerrainCultureViewsByUtilisateurId(@PathVariable int idUtilisateur) {
+        return terrainCultureViewService.findByIdUtilisateur(idUtilisateur);
+    }
 
     // Ajoutez d'autres méthodes pour gérer les opérations CRUD si nécessaire
 }

@@ -22,8 +22,8 @@ public class TerrainCultureViewService {
         return terrainCultureViewRepository.findById(id);
     }
 
-    // public List<TerrainCultureView> getTerrainCultureViewsByUserId(int id_Utilisateur) {
-    //     return terrainCultureViewRepository.findByIdUtilisateur(id_Utilisateur);
-    // }
+    public List<TerrainCultureView> findByIdUtilisateur(int idUtilisateur) {
+        return terrainCultureViewRepository.findByIdUtilisateur(idUtilisateur);
+    }
     // Autres méthodes de service
 }

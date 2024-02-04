@@ -17,6 +17,7 @@ import jakarta.persistence.Column;
 @Table(name = "v_terrain_culture")
 public class TerrainCultureView {
     @Id
+    @Column(name = "id_Terrain")
     private int id_Terrain;
     private String Terrain_Description;
     private String Terrain_Localisation;
