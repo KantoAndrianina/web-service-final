@@ -29,4 +29,14 @@ public class UtilisateurService {
     public void deleteUtilisateur(Integer id) {
         utilisateurRepository.deleteById(id);
     }
+
+    
+    public Utilisateur login(String email, String mdp) {
+        Utilisateur u = utilisateurRepository.findByEmailAndMdp(email, mdp);
+        if (u != null) {
+            return u;
+        } else {
+            return null;
+        }
+    }
 }

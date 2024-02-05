@@ -16,36 +16,36 @@ public class CultureParcelle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_Culture_Parcelle;
+    private Integer id_Culture_Parcelle;
 
     @Column(name = "id_Parcelle")
-    private int idParcelle;
+    private Integer idParcelle;
 
     @Column(name = "id_Culture")
-    private int idCulture;
+    private Integer idCulture;
 
     // Getters and Setters
-    public int getId_Culture_Parcelle() {
+    public Integer getId_Culture_Parcelle() {
         return id_Culture_Parcelle;
     }
 
-    public void setId_Culture_Parcelle(int id_Culture_Parcelle) {
+    public void setId_Culture_Parcelle(Integer id_Culture_Parcelle) {
         this.id_Culture_Parcelle = id_Culture_Parcelle;
     }
 
-    public int getIdParcelle() {
+    public Integer getIdParcelle() {
         return idParcelle;
     }
 
-    public void setIdParcelle(int idParcelle) {
+    public void setIdParcelle(Integer idParcelle) {
         this.idParcelle = idParcelle;
     }
 
-    public int getIdCulture() {
+    public Integer getIdCulture() {
         return idCulture;
     }
 
-    public void setIdCulture(int idCulture) {
+    public void setIdCulture(Integer idCulture) {
         this.idCulture = idCulture;
     }
 }

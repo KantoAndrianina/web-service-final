@@ -16,7 +16,7 @@ public class Terrain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_Terrain")
-    private int idTerrain;
+    private Integer idTerrain;
 
     @Column(name = "Description")
     private String description;
@@ -25,20 +25,20 @@ public class Terrain {
     private String localisation;
 
     @Column(name = "Nb_Parcelle")
-    private int nbParcelle;
+    private Integer nbParcelle;
 
     @Column(name = "id_Utilisateur")
-    private int idUtilisateur;
+    private Integer idUtilisateur;
 
     @Column(name = "validation")
-    private int validation;
+    private Integer validation;
 
     // Getters and setters
-    public int getIdTerrain() {
+    public Integer getIdTerrain() {
         return idTerrain;
     }
 
-    public void setIdTerrain(int idTerrain) {
+    public void setIdTerrain(Integer idTerrain) {
         this.idTerrain = idTerrain;
     }
 
@@ -58,27 +58,27 @@ public class Terrain {
         this.localisation = localisation;
     }
 
-    public int getNbParcelle() {
+    public Integer getNbParcelle() {
         return nbParcelle;
     }
 
-    public void setNbParcelle(int nbParcelle) {
+    public void setNbParcelle(Integer nbParcelle) {
         this.nbParcelle = nbParcelle;
     }
 
-    public int getIdUtilisateur() {
+    public Integer getIdUtilisateur() {
         return idUtilisateur;
     }
 
-    public void setIdUtilisateur(int idUtilisateur) {
+    public void setIdUtilisateur(Integer idUtilisateur) {
         this.idUtilisateur = idUtilisateur;
     }
 
-     public int getValidation() {
+     public Integer getValidation() {
         return validation;
     }
 
-    public void setValidation(int validation) {
+    public void setValidation(Integer validation) {
         this.validation = validation;
     }
 

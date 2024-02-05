@@ -8,5 +8,5 @@ import com.example.myapp.Models.*;
 
 @Repository
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Integer> {
-   
+    Utilisateur findByEmailAndMdp(String email, String mdp);
 }

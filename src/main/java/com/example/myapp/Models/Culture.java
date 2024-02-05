@@ -25,7 +25,7 @@ public class Culture {
     @Column(name = "nom")
     private String nom;
     @Column(name = "prix")
-    private double prix;
+    private Double prix;
 
     public int getId_Culture() {
         return id_Culture;
@@ -43,11 +43,11 @@ public class Culture {
         this.nom = nom;
     }
 
-    public double getPrix() {
+    public Double getPrix() {
         return prix;
     }
 
-    public void setPrix(double prix) {
+    public void setPrix(Double prix) {
         this.prix = prix;
     }
 

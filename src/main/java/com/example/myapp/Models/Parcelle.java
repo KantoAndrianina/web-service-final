@@ -14,53 +14,53 @@ import jakarta.persistence.Column;
 public class Parcelle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_Parcelle;
+    private Integer id_Parcelle;
 
-    private int id_Terrain;
+    private Integer id_Terrain;
     @Column(name = "rendement")
-    private double rendement;
+    private Double rendement;
     @Column(name = "largeur")
-    private double largeur;
+    private Double largeur;
     @Column(name = "longueur")
-    private double longueur;
+    private Double longueur;
 
-    public int getId_Parcelle() {
+    public Integer getId_Parcelle() {
         return id_Parcelle;
     }
 
-    public void setId_Parcelle(int id_Parcelle) {
+    public void setId_Parcelle(Integer id_Parcelle) {
         this.id_Parcelle = id_Parcelle;
     }
 
-    public int getId_Terrain() {
+    public Integer getId_Terrain() {
         return id_Terrain;
     }
 
-    public void setId_Terrain(int id_Terrain) {
+    public void setId_Terrain(Integer id_Terrain) {
         this.id_Terrain = id_Terrain;
     }
 
-    public double getRendement() {
+    public Double getRendement() {
         return rendement;
     }
 
-    public void setRendement(double rendement) {
+    public void setRendement(Double rendement) {
         this.rendement = rendement;
     }
 
-    public double getLargeur() {
+    public Double getLargeur() {
         return largeur;
     }
 
-    public void setLargeur(double largeur) {
+    public void setLargeur(Double largeur) {
         this.largeur = largeur;
     }
 
-    public double getLongueur() {
+    public Double getLongueur() {
         return longueur;
     }
 
-    public void setLongueur(double longueur) {
+    public void setLongueur(Double longueur) {
         this.longueur = longueur;
  
     }

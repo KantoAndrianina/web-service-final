@@ -15,7 +15,7 @@ CREATE TABLE Utilisateur(
 CREATE TABLE Culture(
     id_Culture Serial Primary Key,
     Nom Varchar,
-    Prix int
+    Prix double precision
 );
 
 CREATE TABLE Terrain(
@@ -38,9 +38,9 @@ CREATE TABLE Photo_Terrain(
 CREATE TABLE Parcelle(
     id_Parcelle Serial Primary Key,
     id_Terrain int,
-    rendement numeric,
-    largeur numeric,
-    longueur numeric,
+    rendement double precision,
+    largeur double precision,
+    longueur double precision,
     FOREIGN KEY(id_Terrain) REFERENCES Terrain(id_Terrain)
 );
 

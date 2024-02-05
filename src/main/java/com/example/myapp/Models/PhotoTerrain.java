@@ -14,24 +14,24 @@ import jakarta.persistence.Column;
 public class PhotoTerrain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_Photo_Terrain;
+    private Integer id_Photo_Terrain;
 
-    private int id_Terrain;
+    private Integer id_Terrain;
     private String img;
 
-    public int getId_Photo_Terrain() {
+    public Integer getId_Photo_Terrain() {
         return id_Photo_Terrain;
     }
 
-    public void setId_Photo_Terrain(int id_Photo_Terrain) {
+    public void setId_Photo_Terrain(Integer id_Photo_Terrain) {
         this.id_Photo_Terrain = id_Photo_Terrain;
     }
 
-    public int getId_Terrain() {
+    public Integer getId_Terrain() {
         return id_Terrain;
     }
 
-    public void setId_Terrain(int id_Terrain) {
+    public void setId_Terrain(Integer id_Terrain) {
         this.id_Terrain = id_Terrain;
     }
 

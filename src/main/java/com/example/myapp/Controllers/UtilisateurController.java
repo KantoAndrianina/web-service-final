@@ -4,17 +4,12 @@ import com.example.myapp.Models.*;
 import com.example.myapp.Services.*;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.http.*;
 
-
-
 @RestController
+@CrossOrigin(origins = "http://localhost:3000") // Replace with your React app's URL
 @RequestMapping("/utilisateurs")
 public class UtilisateurController {
 
@@ -28,9 +23,8 @@ public class UtilisateurController {
 
     // @GetMapping
     // public String testa() {
-    //     return "TESTAAAAA";
+    // return "TESTAAAAA";
     // }
-    
 
     @GetMapping("/{id}")
     public Utilisateur getUtilisateurById(@PathVariable Integer id) {
@@ -39,7 +33,7 @@ public class UtilisateurController {
 
     // @PostMapping
     // public Utilisateur saveUtilisateur(@RequestBody Utilisateur utilisateur) {
-    //     return utilisateurService.saveUtilisateur(utilisateur);
+    // return utilisateurService.saveUtilisateur(utilisateur);
     // }
 
     @PostMapping
@@ -55,5 +49,20 @@ public class UtilisateurController {
     @DeleteMapping("/{id}")
     public void deleteUtilisateur(@PathVariable Integer id) {
         utilisateurService.deleteUtilisateur(id);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody Utilisateur utilisateur) {
+        // Extract email and password from utilisateur object
+        String email = utilisateur.getEmail();
+        String mdp = utilisateur.getMdp();
+
+        Utilisateur loggedInUser = utilisateurService.login(email, mdp);
+
+        if (loggedInUser != null) {
+            return ResponseEntity.ok("Login successful");
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login failed");
+        }
     }
 }
