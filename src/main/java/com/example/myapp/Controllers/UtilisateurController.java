@@ -52,7 +52,7 @@ public class UtilisateurController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Utilisateur utilisateur) {
+    public ResponseEntity<Utilisateur> login(@RequestBody Utilisateur utilisateur) {
         // Extract email and password from utilisateur object
         String email = utilisateur.getEmail();
         String mdp = utilisateur.getMdp();
@@ -60,9 +60,9 @@ public class UtilisateurController {
         Utilisateur loggedInUser = utilisateurService.login(email, mdp);
 
         if (loggedInUser != null) {
-            return ResponseEntity.ok("Login successful");
+            return ResponseEntity.ok(loggedInUser);
         } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Login failed");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
         }
     }
 }
