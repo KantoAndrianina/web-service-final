@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.*;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000") // Replace with your React app's URL
+@CrossOrigin(origins = "*") // Replace with your React app's URL
 @RequestMapping("/utilisateurs")
 public class UtilisateurController {
 

@@ -6,8 +6,7 @@ import java.util.*;
 
 import com.example.myapp.Services.*;
 import com.example.myapp.Models.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.*;
 
@@ -15,6 +14,7 @@ import org.springframework.http.*;
 
 @RestController
 // @CrossOrigin(origins = "")
+@CrossOrigin(origins = "*") // Replace with your React app's URL
 @RequestMapping("/terrains")
 public class TerrainController {
 

@@ -9,8 +9,9 @@ import java.util.List;
 import com.example.myapp.Services.*;
 import com.example.myapp.Models.*;
 
+@CrossOrigin(origins = "*") // Replace with your React app's URL
 @RestController
-@CrossOrigin(origins = "https://lively-lollipop-255c7d.netlify.app")
+// @CrossOrigin(origins = "https://lively-lollipop-255c7d.netlify.app")
 @RequestMapping("/cultures")
 public class CultureController {
     @Autowired

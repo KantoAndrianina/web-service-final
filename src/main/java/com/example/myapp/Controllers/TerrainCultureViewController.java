@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
+@CrossOrigin(origins = "*") // Replace with your React app's URL
 @RequestMapping("/terrain-cultures")
 public class TerrainCultureViewController {
 

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.*;
 
+@CrossOrigin(origins = "*") // Replace with your React app's URL
 @RestController
 @RequestMapping("/parcelles")
 public class ParcelleController {
